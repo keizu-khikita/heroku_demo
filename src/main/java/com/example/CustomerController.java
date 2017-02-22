@@ -26,8 +26,9 @@ public class CustomerController {
     public HttpEntity<Customer> getCustomer(@RequestParam(required=false, defaultValue="Customer") String name) {
         System.out.println("==== in customer ====");
         
-        List<Customer> records = repository.findByLastName(name);
-        Customer customer = new Customer("Hello", String.format(template, records.toString()));
+//        List<Customer> records = repository.findAll();
+//        System.out.println(records.toString());
+        Customer customer = new Customer("Hello", String.format(template, name));
         
         return new ResponseEntity<Customer>(customer, HttpStatus.OK);
     }
