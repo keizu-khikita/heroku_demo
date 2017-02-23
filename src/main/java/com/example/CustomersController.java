@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @RestController
 public class CustomersController {
 
-    private static final String template = "Hello, %s!";
+    //private static final String template = "Hello, %s!";
     
     private CustomersRepository repository;
 
