@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 public class DatabaseConfig {
 	@Bean
     @Primary
-    @ConfigurationProperties(prefix = "spring.datasource.test")
+    @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource dataSource() {
         return new org.apache.tomcat.jdbc.pool.DataSource();
     }
